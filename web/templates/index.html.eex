@@ -5,11 +5,14 @@
   <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
 <body>
-  <h3>Welcome to Dynamo!</h3>
-  <ol>
-    <li>Change this template at <code>web/templates/index.html.eex</code></li>
-    <li>Add new routes at <code>web/routers/application_router.ex</code></li>
-    <li>Deploy to production with <code>MIX_ENV=prod mix do compile, server</code></li>
-  </ol>
+  <h3>Welcome to ChatEx!</h3>
+  <p>
+  	This is a little chatroom written in Elixir.
+  </p>
+  <form method="POST" url="/identify">
+  	<label for="handle">Please enter your twitter alias or gravatar email</label>
+  	<input type="text" name="handle" id="handle" autofocus="autofocus"/>
+  	<input type="submit" value="Ok"/>
+  </form>
 </body>
 </html>
