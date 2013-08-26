@@ -2,6 +2,10 @@ defmodule GravatarTest do
   use ExUnit.Case
   doctest Gravatar
 
+  setup_all do
+  	:inets.start
+  end
+
   test "return a gravatar url for a normalized email address" do
   	assert Gravatar.email_to_url("tom@corebvba.be") == 
   		"http://www.gravatar.com/df6affd04f619165417f87f07028f068.xml"
@@ -17,5 +21,9 @@ defmodule GravatarTest do
   		[ display_name: "Tom Janssens",
  		  avatar_url: "http://1.gravatar.com/avatar/df6affd04f619165417f87f07028f068",
  		  email: "tom@corebvba.be"]
+  end
+
+  teardown_all do
+  	:inets.stop
   end
 end
