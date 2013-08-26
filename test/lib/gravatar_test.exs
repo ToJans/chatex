@@ -23,6 +23,13 @@ defmodule GravatarTest do
  		  email: "tom@corebvba.be"]
   end
 
+  test "return a user profile for an unknown email address" do
+  	assert Gravatar.email_to_profile("x@azerty.berty") ==
+  		[ display_name: "x@azerty.berty",
+ 		  avatar_url: "http://1.gravatar.com/avatar/48cc185f3b50ca9547c628140bccd1",
+ 		  email: "x@azerty.berty"]
+  end
+
   teardown_all do
   	:inets.stop
   end
