@@ -58,7 +58,7 @@ defmodule Gravatar do
 
   defp http_download(url) do
   	response = url |> String.to_char_list!() |> :httpc.request()
-  	{:ok,{{'HTTP/1.1', 200, 'OK'},_headers,body}} = response
+  	{:ok,{_status,_headers,body}} = response
   	body
   end
 
@@ -69,6 +69,12 @@ defmodule Gravatar do
 
   defp merge_response({'response',[],[{'entry',[],elements}]},result) do 
   	merge_entry_elements(elements,result)
+  end
+
+  defp merge_response({'response',[],[{'error',[],['User not found']}]},result) do 
+  	email = result[:email]
+  	hash = gravatar_hash(email)
+  	Keyword.merge(result,[display_name: email,avatar_url: "http://1.gravatar.com/avatar/#{hash}"])
   end
 
   defp merge_entry_elements([],result) do
