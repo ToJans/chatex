@@ -10,8 +10,8 @@
   	This is a little chatroom written in Elixir.
   </p>
   <form method="POST" url="/identify">
-  	<label for="handle">Please enter your twitter alias or gravatar email</label>
-  	<input type="text" name="handle" id="handle" autofocus="autofocus"/>
+  	<label for="email">Please enter your email address</label>
+  	<input type="text" name="email" id="email" autofocus="autofocus"/>
   	<input type="submit" value="Ok"/>
   </form>
 </body>
