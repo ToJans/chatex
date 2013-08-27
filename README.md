@@ -1,8 +1,18 @@
-# Chatex
+# Chatex - an Elixir/Dynamo tutorial
 
-This is a project built with Elixir that uses Dynamo to serve web requests.
+This is a tutorial for the Elixir  language that will implement a simple webchat server using the Dynamo web 
+framework.
 
-Resources:
+The idea is that you work yourself through the commit messages. If you are stuck on what to do next, you can take a 
+look at the content of the commits.
+
+** This is currently still a WIP **
+
+## How to get started?
+
+TODO
+
+## Resources:
 
 * [Elixir website](http://elixir-lang.org/)
 * [Elixir getting started guide](http://elixir-lang.org/getting_started/1.html)
