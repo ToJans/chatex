@@ -21,7 +21,3 @@ TODO
 * [Dynamo guides](https://github.com/elixir-lang/dynamo#learn-more)
 * [Dynamo docs](http://elixir-lang.org/docs/dynamo)
 
-
-TODO test
-- [ ] Do A
-- [x] Did B
